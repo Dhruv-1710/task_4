@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Web Showcase</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>My Web Showcase</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#todo">To-Do</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="card-section">
+      <h2>About Me</h2>
+      <p>I am a dedicated web developer with a passion for creating responsive, interactive, and user-friendly websites. With a keen eye for design and a strong foundation in modern web technologies, I strive to build clean, scalable, and performant web applications that deliver seamless user experiences..</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card-section">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A fully responsive multi-page personal website designed to showcase my skills, projects, and experience. Built with HTML, CSS, and JavaScript, it reflects my design aesthetics and frontend development capabilities..</p>
+        </div>
+        <div class="project-card">
+          <h3>To-Do App</h3>
+          <p>A sleek and minimal task management application built with vanilla JavaScript. It leverages local storage to persist data and allows users to add, complete, and delete tasks. Designed for productivity with a clean user interface and smooth interactions.
+
+</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo" class="card-section">
+      <h2>To-Do List</h2>
+      <div class="todo-container">
+        <input type="text" id="taskInput" placeholder="What’s on your mind?" />
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+      </div>
+    </section>
+
+    <!-- Product Listing -->
+    <section id="products" class="card-section">
+      <h2>Product Listing</h2>
+      <div class="filters">
+        <select id="category" onchange="filterProducts()">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <select id="sort" onchange="sortProducts()">
+          <option value="price">Sort by Price</option>
+          <option value="rating">Sort by Rating</option>
+        </select>
+      </div>
+
+      <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card-section">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
